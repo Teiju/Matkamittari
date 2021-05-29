@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta name="keywords" content="HTML,CSS,JavaScript,Solidabis">
+        <meta name="author" content="Annika Wideman">
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="styles.css">
+        <script src="app.js" defer></script>
+        <title>Koodihaaste - AW</title>
+    </head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <header class="header">
+                <h1>AUTOILUMITTARI</h1>
+                <p>Ovatko vauhdissa voitetut minuutit kasvaneiden matkakustannusten arvoisia?</p>
+            </header>
+            <section class="main aside-1">
+                <h3>VALITSE AUTO:</h3>
+                <div class="radio-toolbar">
+                    <input type="radio" id="rbA" name="option" value="A"/>
+                        <label for="rbA" class="accent"><span><span></span></span>A</label>
+                    <input type="radio" id="rbB" name="option" value="B"/>
+                        <label for="rbB" class="accent"><span><span></span></span>B</label>
+                    <input type="radio" id="rbC" name="option" value="C"/>
+                        <label for="rbC" class="accent"><span><span></span></span>C</label>
+                </div></br></br>
+                Kuljettava matka: <input id="distance" type="number" min="0" max="1000000" value="100"> km</input></br>
+            </section>
+            <section class="main aside-2">
+                <h3>MÄÄRITÄ NOPEUS:</h3>
+                Nopeus 1: <input id="speed1" type="number" min="0" max="500" value="60"> km/h</input></br>
+                Nopeus 2: <input id="speed2" type="number" min="0" max="500" value="80"> km/h</input></br></br>
+                <!--<a class="button1" id="calculate">LASKE KULUTUS</a>-->
+                <div id="calculate" class="buttonBox">
+                    <button id="calculate">LASKE KULUTUS</button>
+                    <div class="border"></div>
+                    <div class="border"></div>
+                </div>
+            </section>
+            <section class="result">
+                <p id="conclusion"></p>
+            </section>
+            <section class="content aside-3">
+                <h3>VAIHTOEHTO 1:</h3>
+                Matkaan käytetty aika on: <a id="timeResult1"></a></br>
+                Polttoaineen kokonaiskulutus: <a id="consumption1"></a></br>
+                Keskinopeus: <a id="aveSpeed1"></a></br>
+                Keskikulutus: <a id="aveCons1"></a></br>
+            </section>
+            <section class="content aside-4">
+                <h3>VAIHTOEHTO 2:</h3>
+                Matkaan käytetty aika on: <a id="timeResult2"></a></br>
+                Polttoaineen kokonaiskulutus: <a id="consumption2"></a></br>
+                Keskinopeus: <a id="aveSpeed2"></a></br>
+                Keskikulutus: <a id="aveCons2"></a></br>
+            </section>               
+            <footer class="footer">
+                <p>Sovellus vertaa matka-ajan ja polttoaineen kulutuksen suhdetta kahden eri valitun nopeuden mukaan.</br>
+                    Autojen bensankulutus kasvaa 1.009 kulmakertoimella. Jos auton nopeus kasvaa 1km/h, niin bensankulutus kasvaa 1.009 kertaiseksi.</br></br>
+                    Eri autojen bensakulutus 1km/h nopeudella on seuraava:</br>
+                    Auto A: 3l / 100km</br>Auto B: 3.5l / 100km</br>Auto C: 4l / 100km</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
